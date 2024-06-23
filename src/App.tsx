@@ -7,7 +7,7 @@ function App() {
         <textarea
           name=""
           id=""
-          className="w-full h-1/3 border-2 border-black rounded-md p-2 font-bold text-lg mb-12"
+          className="w-full h-1/2 border-2 border-black rounded-md p-2 font-bold text-lg mb-12"
           placeholder="Enter the text here"
         ></textarea>
         <div className="flex-grow"></div>
