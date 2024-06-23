@@ -1,5 +1,6 @@
 import Keyboard from "./components/Keyboard";
 import { useState } from "react";
+import { Toaster } from "react-hot-toast";
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
 
   return (
     <div className="p-5 w-screen h-screen overflow-hidden">
+      <Toaster />
       <div className="h-full w-full flex flex-col items-center justify-between">
         <textarea
           name=""
