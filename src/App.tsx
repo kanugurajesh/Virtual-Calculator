@@ -2,7 +2,7 @@ import Keyboard from "./components/Keyboard";
 
 function App() {
   return (
-    <div className="p-5 w-screen h-screen">
+    <div className="p-5 w-screen h-screen overflow-hidden">
       <div className="h-full w-full flex flex-col items-center justify-between">
         <textarea
           name=""

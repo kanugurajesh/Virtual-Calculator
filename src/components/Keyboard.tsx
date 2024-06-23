@@ -1,6 +1,6 @@
 const Keyboard = () => {
     return (
-        <div className="w-full h-full flex flex-col gap-[2.5px] font-bold ">
+        <div className="w-full h-full flex flex-col gap-[2.5px] font-bold">
             <div className="flex justify-center gap-[2.5px]">
                 <button className="bg-gray-800 text-white text-2xl w-1/4 h-16 border-[3px] border-gray-800 rounded rounded-br-none hover:bg-white hover:text-gray-800 transition-all ease-in-out duration-300">C</button>
                 <button className="bg-gray-800 text-white text-2xl w-1/4 h-16 rounded rounded-b-none border-[3px] border-gray-800 hover:bg-white hover:text-gray-800 transition-all ease-in-out duration-300">+/-</button>
