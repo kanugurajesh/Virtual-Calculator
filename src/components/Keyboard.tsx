@@ -1,9 +1,26 @@
-const Keyboard = () => {
+import { useState } from "react";
+
+interface Inputs {
+    input: string,
+    setInput: (value: string) => void
+}
+
+const Keyboard = ({input, setInput}:Inputs) => {
+
+    const handleClick = (value: string) => {
+        setInput(input + value);
+    }
+
+    const handleClear = () => {
+        // delete the last character
+        setInput(input.slice(0, -1));
+    }
+
     return (
         <div className="w-full h-full flex flex-col gap-[2.5px] font-bold">
             <div className="flex justify-center gap-[2.5px]">
-                <button className="bg-gray-800 text-white text-2xl w-1/4 h-20 border-[3px] border-gray-800 rounded rounded-br-none hover:bg-white hover:text-gray-800 transition-all ease-in-out duration-300">C</button>
-                <button className="bg-gray-800 text-white text-2xl w-1/4 h-20 rounded rounded-b-none border-[3px] border-gray-800 hover:bg-white hover:text-gray-800 transition-all ease-in-out duration-300">+/-</button>
+                <button className="bg-gray-800 text-white text-2xl w-1/4 h-20 border-[3px] border-gray-800 rounded rounded-br-none hover:bg-white hover:text-gray-800 transition-all ease-in-out duration-300" onClick={handleClear}>C</button>
+                <button className="bg-gray-800 text-white text-2xl w-1/4 h-20 rounded rounded-b-none border-[3px] border-gray-800 hover:bg-white hover:text-gray-800 transition-all ease-in-out duration-300" onClick={() => handleClick("+")}>+/-</button>
                 <button className="bg-gray-800 text-white text-2xl w-1/4 h-20 rounded rounded-b-none border-[3px] border-gray-800 hover:bg-white hover:text-gray-800 transition-all ease-in-out duration-300">%</button>
                 <button className="bg-orange-500 text-white text-2xl w-1/4 h-20 rounded rounded-bl-none border-[3px] border-orange-500 hover:bg-white hover:text-orange-500 transition-all ease-in-out duration-300">/</button>
             </div>
