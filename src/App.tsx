@@ -1,10 +1,11 @@
-import "./App.css";
+import Keyboard from "./components/Keyboard";
 
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <div className="p-10 w-screen h-screen flex flex-col gap-20 ">
+      <textarea name="" id="" className="w-full h-28 border-2 border-black rounded-md p-2" placeholder="Enter the text here"></textarea>
+      <Keyboard />
+    </div>
   );
 }
 
